@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}">
-    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
-    <link rel="icon" href="../static/images/icon.png" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?cache_id={{ cache_id }}">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?cache_id={{ cache_id }}">
+    <link rel="icon" href="../static/images/icon.png?cache_id={{ cache_id }}" />
     <title>HBnB</title>
   </head>
   <body>
@@ -21,54 +21,62 @@
 	  <h4>&nbsp;</h4>
 	  <div class="popover">
 	    <ul>
-	      {% for state in states %}
-	      <li>
-		<h2>{{ state[0].name }}:</h2>
+			<h2>Arizona:</h2>
+			<li>page</li>
+			<li>page2</li>
+		<h2>California:</h2>
+		<li>San Fransisco</li>
+		<li>Los Altos</li>
+		<h2>California:</h2>
 		<ul>
-		  {% for city in state[1] %}
-		  <li>{{ city.name }}</li>
-		  {% endfor %}
-		</ul>
-	      </li>
-	      {% endfor %}
+		<li>San Fransisco</li>
+        <li>Los Altos</li>
 	    </ul>
 	  </div>
 	</div>
 	<div class="amenities">
-	  <h3>Amenities</h3>
-	  <h4>&nbsp;</h4>
-	  <div class="popover">
-	    <ul>
-	      {% for amenity in amenities %}
-	      <li>{{ amenity.name }}</li>
-	      {% endfor %}
-	    </ul>
-	  </div>
+		<h3>Amenities</h3>
+		<h4>Pool, Spa, Gym...</h4>
+		<ul class="popover">
+		  <h2>Pool</h2>
+		  <h2>Spal</h2>
+		  <h2>Gym</h2>
+		</ul>
 	</div>
-	<button type="button">Search</button>
-      </section>
+	<button>Search</button>
+	</section>
       <div class="placesh1"><h1>Places</h1></div>
       <section class="places">
 	<!-- <h1>Places</h1> -->
-	{% for place in places %}
 	<article>
 	  <div class="title_box">
-	    <h2>{{ place.name }}</h2>
-	    <div class="price_by_night">${{ place.price_by_night }}</div>
+	    <h2>Stodio</h2>
+	    <div class="price_by_night">80$</div>
 	  </div>
 	  <div class="information">
-	    <div class="max_guest">{{ place.max_guest }} Guest{% if place.max_guest != 1 %}s{% endif %}</div>
-            <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}s{% endif %}</div>
-            <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom{% if place.number_bathrooms != 1 %}s{% endif %}</div>
+		<div class="max_guest">
+			<div class="guest_number">
+				<lu>2 Guests</lu>
+			</div>
+		</div>
+            <div class="number_rooms">
+				<lu>2 Bedrooms</lu>
+			</div>
+            <div class="number_bathrooms">
+				<lu>1 Bathroom</lu>
+			</div>
 	  </div>
 	  <div class="user">
-            <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
+            <b>Owner:</b> Chaima and khalil
           </div>
           <div class="description">
-	    {{ place.description | safe }}
+			This is a beautiful, spacious, and newly renovated private suite with a private entrance.
+			It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
+			pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
+			and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
+			bedroom and has a shower. The suite has its own central heating and air conditioning unit
           </div>
 	</article>
-	{% endfor %}
       </section>
     </div>
     <footer>
