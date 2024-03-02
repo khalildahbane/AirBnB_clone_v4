@@ -72,6 +72,7 @@ button:hover {
     padding: 10px 0;
     margin-left: -5px;
     margin-top: 0%;
+    margin-bottom: auto;
 }
 
 .amenities .popover ul{
@@ -86,6 +87,7 @@ button:hover {
     padding-bottom: 10px;
     padding-left: 10px;
 }
+
 .popover ul li{
     padding: 4px;
     padding-left: 10px;

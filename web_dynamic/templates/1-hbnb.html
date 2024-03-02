@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{ cache_id }}">
-    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}">
-    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
-    <link rel="icon" href="../static/images/icon.png" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?cache_id={{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?cache_id={{ cache_id }}">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?cache_id={{ cache_id }}">
+    <link rel="icon" href="../static/images/icon.png?cache_id={{ cache_id }}" />
     <title>HBnB</title>
   </head>
   <body>
@@ -16,72 +16,104 @@
     </header>
     <div class="container">
       <section class="filters">
-        <div class="locations">
-          <h3>States</h3>
-          <h4>&nbsp;</h4>
-          <div class="popover">
-            <ul>
-              <li>
-                <h2>Arizona:</h2>
-                <ul>
-                  <li>page</li>
-                  <li>page2</li>
-                </ul>
-              </li>
-              <li>
-                <h2>California:</h2>
-                <ul>
-                  <li>San Fransisco</li>
-                  <li>Los Altos</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="amenities">
-          <h3>Amenities</h3>
-          <h4>Pool, Spa, Gym...</h4>
-          <div class="popover">
-            <ul>
-              <li>Pool</li>
-              <li>Spa</li>
-              <li>Gym</li>
-            </ul>
-          </div>
-        </div>
-        <button type="button">Search</button>
-      </section>
+	<div class="locations">
+	  <h3>States</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+			<h2>Arizona:</h2>
+			<li>page</li>
+			<li>page2</li>
+		<h2>California:</h2>
+		<li>San Fransisco</li>
+		<li>Los Altos</li>
+		<h2>California:</h2>
+		<ul>
+		<li>San Fransisco</li>
+        <li>Los Altos</li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="amenities">
+		<h3>Amenities</h3>
+		<h4>Pool, Spa, Gym...</h4>
+		<ul class="popover">
+			<lu>
+				<li>24-hour check-in</li>
+				<li>Air conditioning</li>
+				<li>Breakfast</li>
+				<li>Buzzer/wireless intercom</li>
+				<li>Cable TV</li>
+				<li>Carbon monoxide detector</li>
+				<li>Catis</li>
+				<li>Dog(s)</li>
+				<li>Doorman</li>
+			</ul>
+		</ul>
+	</div>
+	<button>Search</button>
+	</section>
       <div class="placesh1"><h1>Places</h1></div>
       <section class="places">
-        <article>
-          <div class="title_box">
-            <h2>Studio</h2>
-            <div class="price_by_night">$80</div>
-          </div>
-          <div class="information">
-            <div class="max_guest">
-              <div class="guest_number">
-                <lu>2 Guests</lu>
-              </div>
-            </div>
+	<!-- <h1>Places</h1> -->
+	<article>
+	  <div class="title_box">
+	    <h2>Studio</h2>
+	    <div class="price_by_night">80$</div>
+	  </div>
+	  <div class="information">
+		<div class="max_guest">
+			<div class="guest_number">
+				<lu>2 Guests</lu>
+			</div>
+		</div>
             <div class="number_rooms">
-              <lu>2 Bedrooms</lu>
-            </div>
+				<lu>2 Bedrooms</lu>
+			</div>
             <div class="number_bathrooms">
-              <lu>1 Bathroom</lu>
-            </div>
-          </div>
-          <div class="user">
+				<lu>1 Bathroom</lu>
+			</div>
+	  </div>
+	  <div class="user">
             <b>Owner:</b> Jone
           </div>
           <div class="description">
-            This is a beautiful, spacious, and newly renovated private suite with a private entrance.
-            It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
-            pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
-            and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
-            bedroom and has a shower. The suite has its own central heating and air conditioning unit.
+			This is a beautiful, spacious, and newly renovated private suite with a private entrance.
+			It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
+			pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
+			and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
+			bedroom and has a shower. The suite has its own central heating and air conditioning unit
           </div>
         </article>
+      <article>
+        <div class="title_box">
+          <h2>#Private Studio </h2>
+          <div class="price_by_night">$99</div>
+        </div>
+        <div class="information">
+          <div class="max_guest">
+            <div class="guest_number">
+              <lu>4 Guests</lu>
+            </div>
+          </div>
+          <div class="number_rooms">
+            <lu>2 Bedrooms</lu>
+          </div>
+          <div class="number_bathrooms">
+            <lu>1 Bathroom</lu>
+          </div>
+        </div>
+        <div class="user">
+          <b>Owner:</b> Jone
+        </div>
+        <div class="description">
+          This is a beautiful, spacious, and newly renovated private suite with a private entrance.
+          It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
+          pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
+          and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
+          bedroom and has a shower. The suite has its own central heating and air conditioning unit.
+        </div>
+      </article>
       </section>
     </div>
     <footer>
