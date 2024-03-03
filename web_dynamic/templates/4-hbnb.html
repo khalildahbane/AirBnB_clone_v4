@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- HEAD -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Holberton AirBnB</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="static/scripts/4-hbnb.js"></script> <!-- Updated JavaScript file -->
-    <!-- FAVICON -->
+    <script type="text/javascript" src="static/scripts/3-hbnb.js"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}?{{ cache_id }}">
-    <!-- CSS styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/4-common.css') }}?{{ cache_id }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-header.css') }}?{{ cache_id }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-footer.css') }}?{{ cache_id }}">
@@ -18,50 +15,109 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.css') }}?{{ cache_id }}">
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div id='api_status'></div>
     </header>
     <main>
         <div class="container">
-            <!-- FILTERS -->
             <section class="filters">
-                <!-- LOCATIONS -->
                 <div class="locations">
                     <h3>States</h3>
                     <h4>&nbsp;</h4>
-                    <div class="popover">
-                        {% for state in states|dictsort %}
-                        <h2>{{ state[0] }}</h2>
-                        <ul>
-                            {% for city in state[1].cities|sort(attribute='name') %}
-                            <li>{{ city.name }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endfor %}
-                    </div>
-                </div>
-                <!-- AMENITIES -->
-                <div class="amenities">
-                    <h3>Amenities</h3>
-                    <h4>&nbsp;</h4>
                     <ul class="popover">
-                        {% for amenity in amens|sort(attribute='name') %}
-                        <li><input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">{{ amenity.name }}</li>
-                        {% endfor %}
+                        <h2>Arizona:</h2>
+                        <li>page</li>
+                        <li>page2</li>
+                        <h2>California:</h2>
+                        <li>San Fransisco</li>
+                        <li>Los Altos</li>
                     </ul>
                 </div>
-                <!-- SEARCH BUTTON -->
-                <button id="filter_button">Search</button> <!-- Added id for the button -->
+                <div class="amenities">
+                    <h3>Amenities</h3>
+                    <h4>Pool, Spa, Gym...</h4>
+                    <ul class="popover">
+                        <li><input type="checkbox" data-id="popover" data-name="amenity.name"></li>
+                        <ul>
+                            <li>24-hour check-in</li>
+                            <li>Air conditioning</li>
+                            <li>Breakfast</li>
+                            <li>Buzzer/wireless intercom</li>
+                            <li>Cable TV</li>
+                            <li>Carbon monoxide detector</li>
+                            <li>Catis</li>
+                            <li>Dog(s)</li>
+                            <li>Doorman</li>
+                        </ul>
+                    </ul>
+                </div>
+                <button>Search</button>
             </section>
+            <div class="placesh1"><h1>Places</h1></div>
             <section class="places">
-                <h1>Places</h1>
+                <article>
+                    <div class="title_box">
+                        <h2>Studio</h2>
+                        <div class="price_by_night">$80</div>
+                    </div>
+                    <div class="information">
+                        <div class="max_guest">
+                            <div class="guest_number">
+                                <lu>2 Guests</lu>
+                            </div>
+                        </div>
+                        <div class="number_rooms">
+                            <lu>2 Bedrooms</lu>
+                        </div>
+                        <div class="number_bathrooms">
+                            <lu>1 Bathroom</lu>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <b>Owner:</b> Jone
+                    </div>
+                    <div class="description">
+                        This is a beautiful, spacious, and newly renovated private suite with a private entrance.
+                        It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
+                        pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
+                        and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
+                        bedroom and has a shower. The suite has its own central heating and air conditioning unit.
+                    </div>
+                </article>
+                <article>
+                    <div class="title_box">
+                        <h2>#Private Studio </h2>
+                        <div class="price_by_night">$99</div>
+                    </div>
+                    <div class="information">
+                        <div class="max_guest">
+                            <div class="guest_number">
+                                <lu>4 Guests</lu>
+                            </div>
+                        </div>
+                        <div class="number_rooms">
+                            <lu>2 Bedrooms</lu>
+                        </div>
+                        <div class="number_bathrooms">
+                            <lu>1 Bathroom</lu>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <b>Owner:</b> Jone
+                    </div>
+                    <div class="description">
+                        This is a beautiful, spacious, and newly renovated private suite with a private entrance.
+                        It includes a bedroom, bathroom, and kitchenette. It has a queen bed, a twin bed, and a
+                        pull out sofa bed. The kitchenette includes a mini fridge, microwave, toaster, coffee maker,
+                        and sink. There is a large closet and a dresser for your use. The bathroom is attached to the
+                        bedroom and has a shower. The suite has its own central heating and air conditioning unit.
+                    </div>
+                </article>
             </section>
         </div>
     </main>
-    <!-- FOOTER -->
     <footer>
-        Holberton School
+        <p>Holberton School</p>
     </footer>
 </body>
 </html>
